@@ -3,7 +3,18 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  i = 0
+  len = mutation.length
+  while i<len
+  if base_word.include? mutation[i]
+    result = true
+  else 
+    result = false
+    break
+  end
+  i += 1
+end
+return result
 end
 
 # Driver code - don't touch anything below this line.
