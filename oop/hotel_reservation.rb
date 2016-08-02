@@ -32,3 +32,25 @@ end
 # The add_a_crib method
 # The add_a_custom_amenity method
 
+hotel_guest = HotelReservation.new(customer_name: "Micheal", date: "01-08-2016", room_number: 501)
+puts "Customer name: " + hotel_guest.customer_name
+puts "Customer room no: " + hotel_guest.room_number.to_s
+puts "Check-in date: " + hotel_guest.date
+puts "Amenties: #{hotel_guest.amenities}"
+puts " "
+puts "After calling add_a_fridge"
+hotel_guest.add_a_fridge
+puts "Amenities: #{hotel_guest.amenities}"
+puts " "
+puts "After calling add_a_crib"
+hotel_guest.add_a_crib
+puts "Amenities: #{hotel_guest.amenities}"
+puts " "
+puts "Updating room number of the Customer"
+hotel_guest.room_number = 500
+puts "New room number is: " + hotel_guest.room_number.to_s
+puts ""
+puts "After calling add_a_custom_amenity"
+hotel_guest.add_a_custom_amenity("stove")
+puts "Amenities: #{hotel_guest.amenities}"
+puts " "
